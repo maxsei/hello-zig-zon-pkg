@@ -39,6 +39,7 @@
             # Author: Andrew Kelley <andrew@ziglang.org>
             # Date:   Wed May 17 23:28:35 2023 -0700
             zigpkgs.master-2023-05-18
+            zls
           ];
 
           buildInputs = with pkgs; [
