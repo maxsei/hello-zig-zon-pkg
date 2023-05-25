@@ -1,7 +1,7 @@
 const std = @import("std");
 const testing = std.testing;
 
-export fn greet() *const [5:0]u8 {
+pub export fn greet() *const [5:0]u8 {
     return "hello";
 }
 
