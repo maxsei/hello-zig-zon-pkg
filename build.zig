@@ -6,11 +6,11 @@ pub fn build(b: *std.Build) void {
 
     _ = b.addModule(
         "hello",
-        .{ .source_file = .{ .path = "./src/main.zig" } },
+        .{ .source_file = .{ .path = "./src/hello.zig" } },
     );
 
     const main_tests = b.addTest(.{
-        .root_source_file = .{ .path = "src/main.zig" },
+        .root_source_file = .{ .path = "src/hello.zig" },
         .target = target,
         .optimize = mode,
     });
