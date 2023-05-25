@@ -1,14 +1,15 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    const target = b.standardTargetOptions(.{});
-    const mode = b.standardOptimizeOption(.{});
-
+    // Export this file as a "submodule"
     _ = b.addModule(
         "hello",
         .{ .source_file = .{ .path = "./src/hello.zig" } },
     );
 
+    // Tests.
+    const target = b.standardTargetOptions(.{});
+    const mode = b.standardOptimizeOption(.{});
     const main_tests = b.addTest(.{
         .root_source_file = .{ .path = "src/hello.zig" },
         .target = target,
